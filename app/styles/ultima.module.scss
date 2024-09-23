@@ -1,0 +1,33 @@
+$accent_blue: #8793EF;
+$accent_red: #EF8793;
+$light: #BEBDC9;
+$grey_dark_1: #121212;
+$grey: #323235;
+
+.text_blue {
+    color: $accent_blue;
+}
+
+.text_light{
+    color: $light;
+}
+
+.bg_grey_dark_1{
+    background-color: $grey_dark_1;
+}
+
+.text_red {
+    color: $accent_red;
+}
+
+.border_grey {
+    border-color: $grey;
+}
+
+.border_blue {
+    border-color: $accent_blue;
+}
+
+.border_red {
+    border-color: $accent_red;
+}

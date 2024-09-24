@@ -35,6 +35,7 @@ export default function Home() {
 }
 
 function Face(){
+  const menuTags = ["Скандинавская кухня", "Французская кухня", "Закуски", "Супы", "Салаты", "Десерты", "Напитки", "От шефа"];
   return (
     <div className="flex h-[calc(100vh-80px)] relative">
       <div className="absolute top-4 left-1/2 -translate-x-1/2 w-3/7 h-60 z-20 flex">
@@ -52,8 +53,54 @@ function Face(){
         <div className="flex flex-col h-2/3 items-center justify-end">
           <p className="text-3xl w-5/6">Gustaf Avenue — ресторан, где встречаются скандинавская простота и французская изысканность. Вдохновленные культурным наследием короля Густава III, мы предлагаем уникальное гастрономическое путешествие, объединяя свежесть и натуральность северной кухни с утонченными вкусами Франции.</p>
           <div className="text-2xl w-5/6 mt-16 flex flex-col gap-4">
-            <a className={`h-20 rounded-3xl flex justify-between place-items-center px-6 border ${styles.border_grey} ${styles.text_red}`}>Меню <i className={`border ${styles.border_red} rounded-2xl p-1 w-12 flex justify-center`}><svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.168 14.908L18.424 12.34L1 12.34V11.38L18.424 11.38L16.168 8.812L16.504 8.5C18.2 10.052 19.784 11.124 21.256 11.716V12.004C19.784 12.596 18.2 13.668 16.504 15.22L16.168 14.908Z" fill={`#EF8793  `}/></svg></i></a>
-            <a className={`h-20 rounded-3xl flex justify-between place-items-center px-6 border ${styles.border_grey} ${styles.text_blue}`}>Забронировать столик<i className={`border ${styles.border_blue} rounded-2xl p-1 w-12 flex justify-center`}><svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.168 14.908L18.424 12.34L1 12.34V11.38L18.424 11.38L16.168 8.812L16.504 8.5C18.2 10.052 19.784 11.124 21.256 11.716V12.004C19.784 12.596 18.2 13.668 16.504 15.22L16.168 14.908Z" fill="#8793EF"/></svg></i></a>
+            <div className={`hover:[block-size: calc-size(auto)] overflow-hidden rounded-3xl flex flex-col justify-around px-6 border transition-all ease-in-out duration-200 ${styles.border_grey} group`}>
+              <div className={`${styles.text_red} place-items-center w-full flex justify-between py-6`}>
+              Меню <i className={`border ${styles.border_red} rounded-2xl p-1 w-12 flex justify-center`}><svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.168 14.908L18.424 12.34L1 12.34V11.38L18.424 11.38L16.168 8.812L16.504 8.5C18.2 10.052 19.784 11.124 21.256 11.716V12.004C19.784 12.596 18.2 13.668 16.504 15.22L16.168 14.908Z" fill={`#EF8793  `}/></svg></i>
+              </div>
+              <div className="h-40 flex-wrap gap-x-2 hidden group-hover:flex">
+                {
+                  menuTags.map((name, i) => {
+                    return (
+                    <MenuTag key={"menuTag" + i} name={name}/>
+                    )
+                  })
+                }
+              </div>
+            </div>
+            <div className={`h-auto rounded-3xl hover:[block-size: calc-size(auto)] flex flex-col justify-between px-6 border ${styles.border_grey} ${styles.text_blue} group`}>
+              <div className="flex items-center w-full justify-between py-6">
+                Забронировать столик<i className={`border ${styles.border_blue} rounded-2xl p-1 w-12 flex justify-center`}><svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.168 14.908L18.424 12.34L1 12.34V11.38L18.424 11.38L16.168 8.812L16.504 8.5C18.2 10.052 19.784 11.124 21.256 11.716V12.004C19.784 12.596 18.2 13.668 16.504 15.22L16.168 14.908Z" fill="#8793EF"/></svg></i>
+              </div>
+              <div className={`flex w-full h-40 items-stretch p-3 justify-between ${styles.text_light} hidden group-hover:flex`}>
+                <div className="flex flex-col justify-between">
+                  <h2>Гостей</h2>
+                  <h2>Дата</h2>
+                  <h2>Время</h2>
+                </div>
+
+                <div className="flex flex-col justify-between">
+                  <h2 className="flex items-center gap-3">
+                    <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.832 8.092L3.576 10.66L21 10.66L21 11.62L3.576 11.62L5.832 14.188L5.496 14.5C3.8 12.948 2.216 11.876 0.744 11.284L0.744 10.996C2.216 10.404 3.8 9.332 5.496 7.78L5.832 8.092Z" fill="#323235"/></svg>
+                    1 
+                    <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.168 14.908L18.424 12.34H1V11.38H18.424L16.168 8.812L16.504 8.5C18.2 10.052 19.784 11.124 21.256 11.716V12.004C19.784 12.596 18.2 13.668 16.504 15.22L16.168 14.908Z" fill="white"/></svg></h2>
+                  <h2 className="flex items-center gap-3">
+                    <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.832 8.092L3.576 10.66L21 10.66L21 11.62L3.576 11.62L5.832 14.188L5.496 14.5C3.8 12.948 2.216 11.876 0.744 11.284L0.744 10.996C2.216 10.404 3.8 9.332 5.496 7.78L5.832 8.092Z" fill="#323235"/></svg>
+                    сегодня
+                    <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.168 14.908L18.424 12.34H1V11.38H18.424L16.168 8.812L16.504 8.5C18.2 10.052 19.784 11.124 21.256 11.716V12.004C19.784 12.596 18.2 13.668 16.504 15.22L16.168 14.908Z" fill="white"/></svg>
+                  </h2>
+                  <h2 className="flex items-center gap-3">
+                    <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.832 8.092L3.576 10.66L21 10.66L21 11.62L3.576 11.62L5.832 14.188L5.496 14.5C3.8 12.948 2.216 11.876 0.744 11.284L0.744 10.996C2.216 10.404 3.8 9.332 5.496 7.78L5.832 8.092Z" fill="#323235"/></svg>
+                    14:00
+                    <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.168 14.908L18.424 12.34H1V11.38H18.424L16.168 8.812L16.504 8.5C18.2 10.052 19.784 11.124 21.256 11.716V12.004C19.784 12.596 18.2 13.668 16.504 15.22L16.168 14.908Z" fill="white"/></svg>
+                   </h2>
+                </div>
+
+                <div className="flex flex-col h-full justify-between w-1/2 gap-2">
+                  <input type="text" className={`focus:ring-gray-600 focus:outline-none focus:ring-1 border-solid  rounded-3xl bg-black ${styles.border_grey} accent-transparent p-3 placeholder:bg-black border ${styles.border_grey}`} placeholder="Имя"/>
+                  <input className={`focus:ring-gray-600 focus:outline-none focus:ring-1 rounded-3xl bg-black ${styles.border_grey} accent-transparent p-3 placeholder:bg-black border ${styles.border_grey}`} placeholder="Номер телефона"/>
+                </div>
+              </div>
+            </div>
           </div>
           <a href="#philosophy" className="text-2xl flex p-12 mr-auto mt-auto items-center gap-1">            
             <svg width="28" height="28" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,6 +112,12 @@ function Face(){
       </div>
     </div>
   );
+}
+
+function MenuTag({name} : {name : string}){
+  return (
+    <div className={`rounded-3xl ${styles.border_grey} ${styles.text_light} py-2 px-5 text-2xl border h-14 place-items-center`}>{name}</div>
+  )
 }
 
 function OurPhilosophy(){

@@ -36,7 +36,7 @@ export default function Carousel(){
            <div className={`transition-opacity duration-400 ease-in-out ${fadeIn ? 'opacity-100' : 'opacity-70'} h-full`}>
             <Image alt="slide" src={imgUrlTemplate + slideNum + imgFormat} width={960} height={930} className="h-full w-full object-cover"/>
            </div>
-            <div className="absolute left-4 bottom-4 w-36 justify-between h-12 flex items-center">
+            <div className="absolute left-4 bottom-4 w-36 justify-between h-12 flex items-center max-md:hidden">
               <button onClick={() => {fadeCarousel(false)}} className="bg-[#121212] bg-opacity-60 hover:bg-opacity-80 rounded-3xl w-16 h-10 flex items-center justify-center">
                 <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.832 8.092L3.576 10.66L21 10.66L21 11.62L3.576 11.62L5.832 14.188L5.496 14.5C3.8 12.948 2.216 11.876 0.744 11.284L0.744 10.996C2.216 10.404 3.8 9.332 5.496 7.78L5.832 8.092Z" fill="white"/>
@@ -49,7 +49,7 @@ export default function Carousel(){
                 </svg>
               </button>
             </div>
-            <div className="flex transition-transform ease-in-out duration-150 items-center justify-between p-2 absolute left-[calc(25vw-64px)] bottom-7 w-32 bg-[#121212] bg-opacity-60 rounded-3xl h-6">
+            <div className="flex transition-transform ease-in-out duration-150 items-center justify-between p-2 absolute left-[calc(25vw-64px)] bottom-7 w-32 bg-[#121212] bg-opacity-60 rounded-3xl h-6 max-md:hidden">
                  {[0, 1, 2, 3].map((index) => (
                     <input
                         key={index}

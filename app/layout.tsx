@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased ${oldStandardTT.className}`}
+        className={`antialiased ${oldStandardTT.className} w-screen overflow-x-hidden`}
       >
         {children}
       </body>

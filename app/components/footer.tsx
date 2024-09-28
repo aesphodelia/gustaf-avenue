@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Footer(){
     return (
-        <footer className={`max-lg:text-xl flex ${styles.bg_grey_dark_1} text-2xl h-60 w-full overflow-hidden`}>
+        <footer className={`max-lg:text-xl flex ${styles.bg_grey_dark_1} text-2xl h-40 sm:h-60 w-full overflow-hidden`}>
             <div className="w-full h-full flex items-center justify-around">
                 <div className={`${styles.text_light} flex flex-col justify-between h-3/5`}>
                     <a href="/menu" className="">Меню</a>

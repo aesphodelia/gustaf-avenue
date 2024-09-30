@@ -10,7 +10,6 @@ import { articles } from "@/public/data/articles";
 export default function Home() {
   return (
     <>
-      <Header/>
       <div className="scroll-smooth snap-mandatory snap-y overflow-y-scroll flex flex-col h-[calc(100vh-80px)]">
         <div className="snap-center snap-always shrink-0">
           <Face/>

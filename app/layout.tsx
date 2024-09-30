@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Old_Standard_TT } from 'next/font/google';
+import Header from "./components/header";
 
 const oldStandardTT = Old_Standard_TT({
     subsets: ['latin'],
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body
         className={`antialiased ${oldStandardTT.className} w-screen overflow-x-hidden`}
       >
+        <Header/>
         {children}
       </body>
     </html>

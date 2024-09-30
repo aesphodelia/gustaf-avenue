@@ -9,7 +9,7 @@ export default function Header() {
                 <h1 className={`text-3xl font-bold ml-4 max-md:text-xl`}>Gustaf Avenue</h1>
             </a>
 
-            <div className={`hidden h-full max-h-full sm:flex items-center justify-around sm:text-xl sm:w-80 md:w-[450px] font-thin ${styles.text_light}`}>
+            <div className={`hidden h-full max-h-full sm:flex items-center justify-around sm:text-xl xl:text-2xl sm:w-[340px] md:w-[450px] xl:w-[540px] font-thin ${styles.text_light}`}>
                 <a href="/menu" className={``}>Меню</a>
                 <a href="/reserve" className={` ${styles.text_blue}`}>Забронировать столик</a>
                 <a href="/about" className="">О нас</a>

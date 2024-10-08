@@ -12,7 +12,7 @@ export default function Header() {
             <div className={`hidden h-full max-h-full sm:flex items-center justify-around sm:text-xl xl:text-2xl sm:w-[340px] md:w-[450px] xl:w-[540px] font-thin ${styles.text_light}`}>
                 <a href="/menu" className={``}>Меню</a>
                 <a href="/reserve" className={` ${styles.text_blue}`}>Забронировать столик</a>
-                <a href="/about" className="">О нас</a>
+                <a href="/" className="">О нас</a>
             </div>
         </header>
     );
